@@ -5,11 +5,12 @@
 */
 session_start();
 
-// Database Configuration
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'db_kasir_final');
+// Database Configuration - Auto Detect Railway or Local
+define('DB_HOST', getenv('MYSQLHOST') ?: 'localhost');
+define('DB_USER', getenv('MYSQLUSER') ?: 'root');
+define('DB_PASS', getenv('MYSQLPASSWORD') ?: '');
+define('DB_NAME', getenv('MYSQLDATABASE') ?: 'db_kasir_final');
+define('DB_PORT', getenv('MYSQLPORT') ?: '3306');
 
 class AplikasiKasirPro {
     private $db;
