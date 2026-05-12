@@ -1110,14 +1110,12 @@ if (isset($_GET['cetak_transaksi']) && isset($_GET['jenis'])) {
                     <div style="font-size: 60px;">🏪</div>
                 <?php endif; ?>
                 <h2 class="mb-4">AZRYA GOLD KASIR</h2>
-                <p class="text-muted">v4.9 - Hak Akses Admin & Kasir</p>
                 <?php if($msg) echo "<div class='alert alert-danger'>$msg</div>"; ?>
                 <form method="POST">
                     <div class="mb-3 text-start"><label>Username</label><input type="text" name="user" class="form-control" required></div>
                     <div class="mb-3 text-start"><label>Password</label><input type="password" name="pass" class="form-control" required></div>
                     <button type="submit" name="login" class="btn btn-primary w-100 py-2">LOGIN</button>
                 </form>
-                <hr><small class="text-muted">Demo: admin/admin123 (Admin) | kasir1/kasir123 (Kasir)</small>
             </div>
         </div>
     <?php else: ?>
